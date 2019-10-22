@@ -1,6 +1,6 @@
 import pool from './configDB';
 
-const queryText = `
+const queryText =  `
 CREATE TABLE IF NOT EXISTS
 users(
   id SERIAL,
