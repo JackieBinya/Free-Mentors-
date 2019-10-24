@@ -1,5 +1,5 @@
 import Joi from '@hapi/joi';
-import schema from './schema';
+import schema from '../utils/schema';
 
 class Validators {
   static signUp(req, res, next) {

@@ -1,4 +1,4 @@
-/* import Joi from '@hapi/joi';
+import Joi from '@hapi/joi';
 
 const schema = {
   signUpValidator: Joi.object().keys({
@@ -8,14 +8,6 @@ const schema = {
       .required(),
     email: Joi.string().email({ minDomainSegments: 2 }),
     password: Joi.string().regex(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/).required(),
-    address: Joi.string().trim().min(3).max(128)
-      .required(),
-    occupation: Joi.string().trim().min(3).max(200)
-      .required(),
-    bio: Joi.string().trim().min(3).max(800)
-      .required(),
-    expertise: Joi.string().trim().min(3).max(200)
-      .required(),
   }),
 
   loginValidator: Joi.object().keys({
@@ -43,4 +35,3 @@ const schema = {
 };
 
 export default schema;
- */

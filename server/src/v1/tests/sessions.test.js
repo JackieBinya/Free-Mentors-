@@ -4,7 +4,7 @@ import chaiHttp from 'chai-http';
 import app from '../app';
 import pool from '../db/configDB';
 import User from '../models/User';
-import data from './MockData/user';
+import data from './MockData/userData';
 import '../../../../env';
 import generateToken from '../utils/authService';
 import Session from '../models/Session';
