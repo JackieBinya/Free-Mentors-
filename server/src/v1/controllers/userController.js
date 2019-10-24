@@ -17,10 +17,6 @@ class UserController {
         lastName: lastName.trim(),
         email: email.trim(),
         password: hash,
-        address: address.trim(),
-        occupation: occupation.trim(),
-        bio: bio.trim(),
-        expertise: expertise.trim(),
       });
 
       return res.status(201).json({
@@ -31,10 +27,6 @@ class UserController {
           firstName: rows[0].first_name,
           lastName: rows[0].last_name,
           email: rows[0].email,
-          address: rows[0].address,
-          occupation: rows[0].occupation,
-          bio: rows[0].bio,
-          expertise: rows[0].expertise,
           role: rows[0].role,
           isAdmin: rows[0].is_admin,
           id: rows[0].id,

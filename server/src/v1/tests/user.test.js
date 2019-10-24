@@ -5,7 +5,7 @@ import bcrypt from 'bcryptjs';
 import app from '../app';
 import pool from '../db/configDB';
 import User from '../models/User';
-import data from './MockData/user';
+import data from './MockData/userData';
 import '../../../../env';
 import generateToken from '../utils/authService';
 
@@ -53,30 +53,6 @@ describe('POST /api/v1/auth/signup', () => {
 
   it('should not sign up a user if password is invalid', async () => {
     user = { ...data.user04 };
-    const res = await exec();
-    expect(res).to.have.status(400);
-  });
-
-  it('should not sign up a user if address is invalid', async () => {
-    user = { ...data.user05 };
-    const res = await exec();
-    expect(res).to.have.status(400);
-  });
-
-  it('should not sign up a user if occupation is invalid', async () => {
-    user = { ...data.user06 };
-    const res = await exec();
-    expect(res).to.have.status(400);
-  });
-
-  it('should not sign up a user if bio is invalid', async () => {
-    user = { ...data.user07 };
-    const res = await exec();
-    expect(res).to.have.status(400);
-  });
-
-  it('should not sign up a user if expertise is invalid', async () => {
-    user = { ...data.user08 };
     const res = await exec();
     expect(res).to.have.status(400);
   });
