@@ -1,4 +1,3 @@
-/* eslint-env mocha */
 import chai from 'chai';
 import chaiHttp from 'chai-http';
 import bcrypt from 'bcryptjs';

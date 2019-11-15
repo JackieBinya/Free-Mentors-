@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import Validators from '../middleware/inputValidators';
+import Validators from '../middleware/Validators';
 import UserController from '../controllers/userController';
-import Verify from '../middleware/verify';
+import Verify from '../middleware/Verify';
 
 const router = Router();
 

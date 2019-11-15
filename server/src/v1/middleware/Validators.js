@@ -1,20 +1,19 @@
-import Joi from '@hapi/joi';
 import schema from '../utils/schema';
 
 class Validators {
   static signUp(req, res, next) {
-    const { error } = Joi.validate(req.body, schema.signUpValidator);
+    const { error } = schema.signUpValidator.validate(req.body);
     if (error) {
       return res.status(400).json({
         status: 400,
-        error: error.details[0].message,
+        error: error.details,
       });
     }
     next();
   }
 
   static login(req, res, next) {
-    const { error } = Joi.validate(req.body, schema.loginValidator);
+    const { error } = schema.loginValidator.validate(req.body);
     if (error) {
       return res.status(400).json({
         status: 400,
@@ -25,7 +24,7 @@ class Validators {
   }
 
   static session(req, res, next) {
-    const { error } = Joi.validate(req.body, schema.sessionValidator);
+    const { error } = schema.sessionValidator.validate(req.body);
     if (error) {
       return res.status(400).json({
         status: 400,
@@ -36,33 +35,33 @@ class Validators {
   }
 
   static mentorJoiVal(req, res, next) {
-    const { error } = Joi.validate(req.params, schema.mentorIdValidator);
+    const { error } = schema.mentorIdValidator.validate(req.params);
     if (error) {
       return res.status(400).json({
         status: 400,
-        error: 'Mentor id must be a number',
+        error: error.details[0].message,
       });
     }
     next();
   }
 
   static sessionJoiVal(req, res, next) {
-    const { error } = Joi.validate(req.params, schema.sessionIdValidator);
+    const { error } = schema.sessionIdValidator.validate(req.params);
     if (error) {
       return res.status(400).json({
         status: 400,
-        error: 'Session id must be a number',
+        error: error.details[0].message,
       });
     }
     next();
   }
 
   static userJoiVal(req, res, next) {
-    const { error } = Joi.validate(req.params, schema.userIdValidator);
+    const { error } = schema.userIdValidator.validate(req.params);
     if (error) {
       return res.status(400).json({
         status: 400,
-        error: 'User id must be a number',
+        error: error.details[0].message,
       });
     }
     next();
