@@ -1,6 +1,8 @@
 {
     "extends": "airbnb",
     "rules": {
-        "consistent-return": "off"
+        "consistent-return": "off",
+        "linebreak-style": "off",
+        "no-undef": "off"
     }
 }
