@@ -39,6 +39,7 @@ const schema = {
       .regex(/^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$/)
       .required()
       .messages({
+        'string.empty': 'Please provide your password.',
         'string.min': 'The password must have no less than six characters.',
         'string.pattern.base': 'The password must consists of letters and numbers.',
       }),

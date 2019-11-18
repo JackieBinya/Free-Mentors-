@@ -1,5 +1,6 @@
 import express from 'express';
 import swaggerUI from 'swagger-ui-express';
+import cors from 'cors';
 import swaggerDocument from '../../../swagger.json';
 import routes from './routes';
 import Admin from './middleware/Admin';
@@ -7,6 +8,7 @@ import Admin from './middleware/Admin';
 const app = express();
 
 app.use(express.json());
+app.use(cors());
 
 app.get('/', (req, res) => res.send(`Welcome to Free Mentors!
 Created by Jacqueline Binya, for Andela Bootcamp Cylcle 10;

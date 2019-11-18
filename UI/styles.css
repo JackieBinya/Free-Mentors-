@@ -160,7 +160,6 @@ header  {
   cursor: pointer;
   margin-bottom: 1em;
   text-decoration: none;
-  text-transform: uppercase;
   outline: none;
   border: none;
  }
@@ -491,6 +490,27 @@ ul li {
   color: rgb(68, 64, 64);
 }
 
+.display-msg {
+  background-color: rgb(248, 203, 223);
+  color: rgb(139, 22, 75);
+  padding: 0.8em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  display: none;
+  font-size: small
+}
+
+.del-msg {
+  color: rgb(139, 22, 75);
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: x-large;
+}
+
 .sessionForm input, .signUpForm div input, .sessionForm div textarea, .signUpForm div textarea, .signInForm input {
   width: 100%;
   padding: 0.5em;
@@ -513,19 +533,23 @@ ul li {
     left: 10%;
   } 
 
-  .sessionForm, .signUpForm, .signInForm{
+  .sessionForm, .signUpForm, .signInForm, .display-msg{
     width: 70%;
     margin: 0 auto;
+    padding: 1em;
+  }
+
+  .sessionForm, .signUpForm, .signInForm{
     background-color: whitesmoke;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-    padding: 2em;
   }
 } 
 
   @media only screen and (min-width: 1024px){
-    .sessionForm , .signUpForm, .signInForm {
+    .sessionForm , .signUpForm, .signInForm, .display-msg {
       width: 52%;
       margin: 0 auto;
+      padding:1em;
     }
 
     .headline-container {
@@ -534,7 +558,7 @@ ul li {
   }
 
   @media only screen and (min-width: 2560px){
-    .sessionForm , .signUpForm, .signInForm {
+    .sessionForm , .signUpForm, .signInForm, .display-msg {
       width: 35%;
       margin: 0 auto;
     }
